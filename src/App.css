@@ -1,0 +1,269 @@
+:root {
+  /* Keep all your existing color variables */
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-color: #3a86ff;
+  --accent-hover: #2667cc;
+  --danger-color: #ff4d4d;
+  --danger-hover: #cc3d3d;
+  --success-color: #4caf50;
+  --success-hover: #3d8b40;
+  --border-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+.App {
+  text-align: center;
+  max-width: 100%;
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Component layout */
+.component-section {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+/* Header styles */
+.user-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.logout-button {
+  background-color: var(--danger-color);
+  padding: 0.5rem 1rem;
+}
+
+/* Form and input styles */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+}
+
+/* Task list styles */
+.task-list {
+  width: 100%;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  border-left: 4px solid var(--accent-color);
+}
+
+/* Button styles */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 0.5rem;
+  }
+  
+  .component-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.sort-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #6c757d;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-manager {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.task-list li div {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  margin-bottom: 1rem;
+}
+
+.components-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.user-header {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.logout-button {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: var(--danger-hover);
+}
+
+@media (max-width: 600px) {
+  .user-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .logout-button {
+    width: 100%;
+  }
+}
+
+/* Loading state */
+.loading {
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Task items */
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.task-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.task-list li div {
+  flex: 1;
+}
+
+.task-list li h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--accent-color);
+}
+
+.task-list li p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+}
+
+.task-list li small {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
