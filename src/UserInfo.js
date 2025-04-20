@@ -23,7 +23,7 @@ const UserInfo = ({ handleClick }) => {
         <span className="lucky-number"> {userInfo.luckyNumber}</span>
       </p>
       <div className="button-group">
-        <button onClick={handleClick}>Show Alert</button>
+        <button className="show-alert-button" onClick={handleClick}>Show Alert</button>
         <button 
           onClick={generateNewLuckyNumber}
           className="lucky-button"
